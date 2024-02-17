@@ -13,6 +13,6 @@ This project provides a simple web-based login interface with additional social 
 To get started with this project, clone this repository and open the `index.html` file in a web browser.
 
 ```bash
-
-cd your-project-folder
+git clone https://github.com/ekinonal/Login-Page.git 
+cd Login-Page
 ```
