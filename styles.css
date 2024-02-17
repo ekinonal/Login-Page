@@ -1,0 +1,157 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url('bg.jpg'); /* Make sure to replace 'bg.jpg' with the actual path to your image */
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-form {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.815);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative; /* for absolute positioning of the validation message */
+}
+
+.form-group label {
+  display: block; /* Changed to block to ensure label is above the input */
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #333;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.login-btn i {
+  margin-right: 5px; /* Add some space between the icon and the text */
+}
+
+.lgn {
+  background-image: linear-gradient(to right, #b77a95, #d97d85, #e5875d);
+  color: #fff;
+}
+
+.lgn:hover {
+  background-image: linear-gradient(to left, #b77a95 , #d97d85, #e5875d);
+}
+
+.google, .facebook, .twitter {
+  color: white;
+}
+
+.google { background-color: #DB4437; }
+.google:hover { background-color: #a53429; }
+
+.facebook { background-color: #3b5998; }
+.facebook:hover { background-color: #1f2f50; }
+
+.twitter { background-color: #1DA1F2; }
+.twitter:hover { background-color: #146191; }
+
+.form-group a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.8rem;
+  display: block; /* ensures link is on a new line */
+  margin-top: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.input-container .icon {
+  color: #aaa;
+  padding: 10px;
+}
+
+.input-container .form-control {
+  border: none;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+.validation-message {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  border: 1px solid #D8000C;
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 4px;
+  font-size: 0.8em;
+}
+
+.form-control:invalid {
+  border-color: #D8000C;
+}
+
+.form-control:invalid + .validation-message {
+  display: block;
+}
+
+/* ... other styles ... */
+
+.validation-message {
+  display: block; /* Show by default */
+  /* Other styles */
+}
+
+/* Hide the validation message when it is empty */
+.validation-message:empty {
+  display: none;
+}
+
